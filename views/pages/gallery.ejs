@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head.ejs', title) %>
+</head>
+
+<body>
+    <%- include ('../partials/nav.ejs') %>
+        <div class="grid">
+            <% gallery.forEach(element=> { %>
+                <div>
+                    <img src=<%=`${element.download_url}`%>>
+                </div>
+                <% }) %>
+        </div>
+</body>
+
+</html>

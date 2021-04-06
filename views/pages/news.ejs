@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head.ejs', title) %>
+</head>
+
+<body>
+    <%- include ('../partials/nav.ejs') %>
+        <div class="grid2">
+            <% news.forEach(element=> { %>
+                <div>
+                    <h1>
+                        <%= `${element.title}` %>
+                    </h1>
+                    <p>
+                        <%= `${element.publishedAt}` %>
+                    </p>
+                    <img src=<%=`${element.urlToImage}`%>>
+                    <p>
+                        <%= `${element.description}` %>
+                    </p>
+                    <div class="flex">
+                        <p>
+                            <%= `${element.author}` %>
+                        </p>
+                        <a href=<%=`${element.url}`%>>Click4more</a>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+</body>
+
+</html>
